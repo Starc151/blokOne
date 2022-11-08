@@ -8,8 +8,7 @@ string[] GetStringArrMoreThree(string[] inArr){
     }
     return tmpStr.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 }
-Write("Введите массив строк через \",\" или пробел: ");
-string[] arr=ReadLine()!.Split(new char[]{' ', ','}, StringSplitOptions.RemoveEmptyEntries);
-Write(string.Join(", ", arr));
-WriteLine();
-WriteLine(string.Join(", ", GetStringArrMoreThree(arr)));
+Write("Введите массив строк через пробел: ");
+string[] arr=ReadLine()!.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+WriteLine($"Введённоый массив: [\"{string.Join("\" \"", arr)}\"]");
+WriteLine($"Полученный массив с элементами 3 или меньше: [\"{string.Join("\" \"", GetStringArrMoreThree(arr))}\"]");
